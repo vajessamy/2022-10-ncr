@@ -1,0 +1,98 @@
+https://www.googleapis.com/apiName/apiVersion/resourcePath?parameters
+https://www.googleapis.com/books/v1/{collectionName}/resourceID?parameters
+
+a search for quilting
+GET https://www.googleapis.com/books/v1/volumes?q=quilting
+
+
+Here is an example of searching for Daniel Keyes' "Flowers for Algernon":
+GET https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=yourAPIKey
+
+
+
+https://www.googleapis.com/books/v1/volumes
+https://www.googleapis.com/books/v1/volumes/volumeId
+
+
+
+
+google Book API Key
+AIzaSyAJCOBvHEGe-l1O_pnzCP59lcLsz5V9FS4
+
+
+
+
+fetch('https://www.googleapis.com/books/v1/volume?q=search-terms&key=YOUR_API_KEY)
+	.then(response => response.json())
+	.then(result => {
+this.setState({books:result.items})
+
+
+
+
+Here is an example of searching for Daniel Keyes' "Flowers for Algernon":
+GET https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=yourAPIKey
+
+Results
+
+{
+ "kind": "books#volumes",
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "_ojXNuzgHRcC",
+   "etag": "OTD2tB19qn4",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/_ojXNuzgHRcC",
+   "volumeInfo": {
+    "title": "Flowers",
+    "authors": [
+     "Vijaya Khisty Bodach"
+    ],
+   ...
+  },
+  {
+   "kind": "books#volume",
+   "id": "RJxWIQOvoZUC",
+   "etag": "NsxMT6kCCVs",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/RJxWIQOvoZUC",
+   "volumeInfo": {
+    "title": "Flowers",
+    "authors": [
+     "Gail Saunders-Smith"
+    ],
+    ...
+  },
+  {
+   "kind": "books#volume",
+   "id": "zaRoX10_UsMC",
+   "etag": "pm1sLMgKfMA",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/zaRoX10_UsMC",
+   "volumeInfo": {
+    "title": "Flowers",
+    "authors": [
+     "Paul McEvoy"
+    ],
+    ...
+  },
+  "totalItems": 3
+}
+})}
+
+
+The following example searches for books with an epub download available:
+GET https://www.googleapis.com/books/v1/volumes?q=pride+prejudice&download=epub&key=yourAPIKey
+
+
+The following example restricts search results to those available as free eBooks:
+GET https://www.googleapis.com/books/v1/volumes?q=flowers&filter=free-ebooks&key=yourAPIKe
+
+The following example returns search results with limited volume information:
+GET https://www.googleapis.com/books/v1/volumes?q=flowers&projection=lite&key=yourAPIKey
+
+
+relevance - Returns results in order of the relevance of search terms (this is the default).
+newest - Returns results in order of most recently to least recently published.
+The following example lists results by published date, newest to oldest:
+GET https://www.googleapis.com/books/v1/volumes?q=flowers&orderBy=newest&key=yourAPIKey
+
+

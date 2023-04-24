@@ -1,4 +1,4 @@
-fctionAuth(){
+function Auth(){
     return(
         <div>
             <h1>NewOrder Page</h1>
@@ -6,4 +6,4 @@ fctionAuth(){
     )
 
     }
-    export default Auth:
+    export default Auth;

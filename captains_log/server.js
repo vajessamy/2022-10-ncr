@@ -15,6 +15,7 @@ app.get('/CaptainsLog', (req, res) => {
 
 app.get('CaptainsLog/New', (req, res)=>{
     res.render('CaptainsLog/New');
+    console.log('Make a New Log Form Page')
 });
 
 

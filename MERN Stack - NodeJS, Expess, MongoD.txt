@@ -1,0 +1,95 @@
+MERN Stack - NodeJS, Expess, MongoDB
+full-stack developer
+Node Developers
+
+What is CRUD?
+CRUD stands for Create, Read, Update and Delete. 
+HTTP Action	CRUD Operator
+GET	Read
+POST	Create
+PUT	Update
+DELETE	Delete
+
+REST stands for Representational state transfer
+
+MVC
+One way to keep an app from getting messy is to separate it out into three sections
+Models - data (javascript variables)
+Views - how the data is displayed to the user (HTML)
+Controllers - the glue that connects the models with the views
+
+
+
+DEFAULTS FOR EXPRESS SERVER.JS FILE
+// Require modules
+const express = require('express');
+
+// Create the Express app
+const app = express();
+
+// Configure the app (app.set)
+
+
+// Mount middleware (app.use)
+
+
+
+// Mount routes
+app.get('/', function(req, res) {
+  	res.send('<h1>Hello World!</h1>');
+});
+
+// Tell the app to listen on port 3000
+app.listen(3000, function() {
+ console.log('Listening on port 3000');
+
+});
+
+
+
+routes order
+index
+new
+delete
+update
+create
+edit
+show
+
+
+
+$ mkdir express-practice
+$ cd express-practice
+$ touch server.js
+$ npm init -y
+code .
+
+$ npm i express
+
+First we Created a directory for the app in classworkcalled fruitsand cdinto it
+touch server.js
+npm init -y
+npm i express jsx-view-engine react react-dom dotenv
+
+
+Express boilerplate
+const express = require('express');
+const app = express();
+
+app.set('view engine', 'jsx');
+app.engine('jsx', require('jsx-view-engine').createEngine());
+
+// ...Other code
+// ...More code
+app.listen(3000, ()=>{
+    console.log('listening');
+});
+
+mongoose connection
+
+MONGO_URI=mongodb+srv://vajessamy:vAwscDoAOSmEYczF@wise.hnnpulg.mongodb.net/veggies?retryWrites=true&w=majority
+
+
+npm i express mongoose method-override dotenv jsx-view-engine nodemon react react-dom
+
+

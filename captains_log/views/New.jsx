@@ -1,8 +1,9 @@
 const React = require('react');
 
-class New extends React.Component {
-  render() {
-    return (
+// class New extends React.Component {
+//   render() {
+const New =(props) => {
+      return (
          <div>
             <h1>Captain Log</h1>
             <form action="/logs" method="POST">
@@ -11,8 +12,9 @@ class New extends React.Component {
                 Ship is Broken: <input type="checkbox" name="shipIsBroken" /><br/>
                 <input type="submit" name="" value="Create Entry"/>
              </form>
-        </div>);
+        </div>
+        );
   }
-}
+
 
 module.exports = New;

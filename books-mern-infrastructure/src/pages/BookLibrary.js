@@ -1,7 +1,7 @@
 function BookLibrary() {
   return (
     <div>
-       <h1>BookLibrary Page</h1>
+       <h1>Favorite Page</h1>
     </div>
   );
 } 

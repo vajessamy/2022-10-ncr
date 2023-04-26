@@ -36,6 +36,7 @@ app.use(require('./config/checkToken'));
 // API ROUTES GO HERE ONCE WE HAVE THEM
 app.use('/api/users', require('./routes/api/users'));
 
+app.use('/api/border', ensureLoggedIn, require('./routes/api/border'));
 
 // FOLLOWING IS THE CATCH ALL ROUTE:
 // The catch all route is put at the end of the file because it is there for any route that wasn't used by our express backend. This means that no matter what the url has at the end of it, if it's a get request this route will catch it and do something with it.

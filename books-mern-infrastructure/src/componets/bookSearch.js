@@ -1,33 +1,12 @@
-import {Document, Page} from 'react-pdf'
-import { Link } from 'react-router-dom';
-import Pagination from "../Pagination";
-
-let PageSize = 10;
-
-export default function  BookDisplay ({book}) {
-
-// // pagination code
-// const [currentPage, setCurrentPage] = useState(1);
-
-// const currentTableData = useMemo(() => {
-//   const firstPageIndex = (currentPage - 1) * PageSize;
-//   const lastPageIndex = firstPageIndex + PageSize;
-//   return data.slice(firstPageIndex, lastPageIndex);
-// }, [currentPage]);
-
-return(
-       <div>
-             
-        {/* {<> 
-        <br/>
-                  <p>Total Items {book.totalItems} </p> 
-                  </> */
-
-          
-        book?.items?.map((result) => {
+function BookSearch() {
+    // return (
+    //   <div>
+         {/* <h1>Book Search Page</h1> */}
+         book?.items?.map((result) => {
           // console.log(result)
           // console.log(result.volumeInfo.previewlink)
-                return<div key = {result?.id}>
+                return
+                <div key = {result?.id}>
              
                   <table>
                     <tr>
@@ -44,6 +23,8 @@ return(
                 </div>
              })} 
               
-      </div>
-    )
-};
+  //     </div>
+  //   );
+  // } 
+  
+  export default BookSearch;

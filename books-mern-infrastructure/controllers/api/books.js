@@ -1,4 +1,4 @@
-// const Book = require('../../models/book');
+// const Order = require('../../models/book');
 // // const Item = require('../../models/item');
 
 // module.exports = {
@@ -23,14 +23,14 @@
 // async function title(req, res) {
 //   try{
 //     const title = await Book.getTitle(req.user._id);
-//     res.status(200).json(title);
+//     res.status(200).json(cart);
 //   }catch(e){
 //     res.status(400).json({ msg: e.message });
 //   }
 // }
 
 // // Add an item to the cart
-// async function addTo(req, res) {
+// async function addToCart(req, res) {
 //   try{
 //     const cart = await Order.getCart(req.user._id);
 //     await cart.addItemToCart(req.params.id);
@@ -40,7 +40,16 @@
 //   }  
 // }
 
-
+// // Updates an item's qty in the cart
+// async function setItemQtyInCart(req, res) {
+//   try{
+//     const cart = await Order.getCart(req.user._id);
+//     await cart.setItemQty(req.body.itemId, req.body.newQty);
+//     res.status(200).json(cart);
+//   }catch(e){
+//     res.status(400).json({ msg: e.message });
+//   }
+// }
 
 // // Update the cart's isPaid property to true
 // async function checkout(req, res) {
@@ -59,7 +68,7 @@
 //   // Sort most recent orders first
 //   try{
 //     const orders = await Order
-//       .find({ user: req.user._id })
+//       .find({ user: req.user._id, isPaid: true })
 //       .sort('-updatedAt').exec();
 //     res.status(200).json(orders);
 //   }catch(e){

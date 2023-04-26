@@ -5,7 +5,7 @@ import Auth from './pages/Auth';
 import BookLibrary from './pages/BookLibrary'
 import BookSearch from './pages/BookSearch'
 import { Routes, Route} from 'react-router-dom';
-import NavBar from './components/NavBar';
+import NavBar from './componets/NavBar';
 import { getUser } from "./utilities/users-service"
 
 function App() {

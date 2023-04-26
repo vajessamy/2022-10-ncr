@@ -1,17 +1,4 @@
-// import { Link } from 'react-router-dom';
 
-// function NavBar({ user }) {
-  
-//     return (
-//       <nav>
-//         <Link to="/books">Library</Link>
-//         &nbsp; | &nbsp;
-//         <Link to="/books/new">New Book</Link>
-//         <span>WELCOME {user}</span>
-//       </nav>
-//     );
-//   } 
-  
 //   export default NavBar;
 import { Link } from 'react-router-dom';
 import * as userService from '../utilities/users-service'
